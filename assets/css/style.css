@@ -1,0 +1,275 @@
+nav {
+  grid-area: nav;
+  background-color: #48e2a7;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(252, 203, 186);
+}
+section{
+  grid-area: section;
+  background-color: rgb(252, 203, 186);
+}
+
+footer {
+  grid-area: footer;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "section"
+    "footer";
+  grid-template-columns: 1fr;
+  height: 100vh;
+}
+
+body {
+  background-color: rgb(252, 203, 186);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+section{
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+section{
+  padding: 9px;
+  text-align: center;
+}
+.filtros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.filtros {
+  background-color: rgb(235, 240, 172);
+  color: #333;
+}
+
+.filtros,
+div {
+  margin-bottom: 30px;
+}
+
+select {
+  width: 80%;
+  text-align: center;
+}
+
+/*hamburguesa*/
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
+.navbar {
+  color: rgb(0, 0, 0);
+}
+
+.menu_hamburguesa {
+  display: none;
+}
+
+.menu_hamburguesa:checked+.ul_links {
+  height: calc(100vh - var(--altura_header));
+}
+
+.labe_hamburguesa {
+  color: rgb(251, 250, 250);
+}
+
+.list_icon {
+  color: var(--color_blanco);
+  cursor: pointer;
+}
+
+.ul_links {
+  width: 80%;
+  background-color: var(--color_blue);
+  position: absolute;
+  top: 0%;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  gap: 2rem;
+  transition: all 0.3s;
+}
+
+.link {
+  font-size: 20px;
+  color: var(--color_blanco);
+  font-weight: bold;
+}
+
+/*fin de hamburguesa*/
+
+/*targetas*/
+.tarjeta-producto {
+  width: 250px;
+  height: 400px;
+  background-color: #c28dbf;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px auto;
+  padding: 15px;
+  text-align: center;
+}
+.tarjeta-producto{
+border-radius: 10%;
+}
+
+.tarjeta-producto img {
+  border-radius: 20%;
+  transform: rotate(0deg);
+  transition: transform 1.5s;
+}
+.tarjeta-producto img:hover{
+  transform: rotate(110deg) scale(0.7);
+
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  height: 260px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #0e0e0e;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.boton-ver-mas {
+  background-color: #6db0f7;
+  color: #141010;
+  padding: 10px 20px;
+  border-radius: 15%;
+  cursor: pointer;
+}
+
+/*fin de targetas*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #598a77;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  
+}
+
+footer,
+a {
+  padding: 20px;
+}
+.redes{
+  display: flex;
+ 
+  margin: 0%;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  border-radius: 10%;
+}
+
+/*  latptop */
+@media (width >=1024px) {
+  .container {
+    grid-template-areas:
+      "nav header"
+      "nav main "
+      "nav main"
+      "nav main"
+      "nav section"
+      "footer footer";
+
+    grid-template-columns: 190px 1fr;
+    grid-template-rows: 90px auto 60px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .labe_hamburguesa {
+    display: none;
+  }
+
+  .ul_links {
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+
+  .link {
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.3s;
+    padding: 0.2rem 0.7rem;
+  }
+
+  .link:hover {
+    background-color: #5f1192;
+  }
+
+  .filtros {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filtros div {
+    margin-bottom: 30px;
+  }
+
+  select {
+    width: 100%;
+  }
+ 
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+  }
+ 
+}
